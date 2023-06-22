@@ -32,10 +32,13 @@ class AlbumSeeder extends Seeder
             // 고유한 파일명 생성
             $filename = Str::random(20) . '.jpg';
             // 파일 시스템에 이미지 저장
-            $storagePath = Storage::disk('public')->putFileAs('albums', $resizedImage, $filename);
-            if (!$storagePath) {
+            $success = Storage::disk('public')->put('albums/' . $filename, $resizedImage);
+            if (!$success) {
                 continue;
             }
+            // 심볼릭 링크를 고려해 이미지 패스 저장
+            $storagePath = 'storage/albums/' . $filename;
+
             // 모델을 사용하여 데이터베이스에 이미지 패스 저장
             Album::create([
                 'image_path' => $storagePath,
