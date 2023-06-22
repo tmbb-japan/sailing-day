@@ -12,14 +12,9 @@
     <div class="container">
       <div class="carousel">
         <figure>
-          <img src="{{ asset('images/karuma.png') }}" alt="카르마">
-          <img src="{{ asset('images/K.png') }}" alt="케이">
-          <img src="{{ asset('images/ray.png') }}" alt="레이">
-          <img src="{{ asset('images/jupiter.png') }}" alt="주피터">
-          <img src="{{ asset('images/tensai.png') }}" alt="천체">
-          <img src="{{ asset('images/time.png') }}" alt="타임">
-          <img src="{{ asset('images/aurora.png') }}" alt="오로라">
-          <img src="{{ asset('images/souvenir.png') }}" alt="수베니어">
+          @foreach ($albums as $album)
+            <img src="{{ asset($album->image_path) }}" alt="Album Image">
+          @endforeach
         </figure>
       </div>  
     </div>
