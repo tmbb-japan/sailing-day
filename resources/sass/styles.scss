@@ -13,14 +13,16 @@ body {
 }
 
 .album-cards {
-  position: absolute;
   width: 50%;
   height: 50%;
   display: flex;
   transform-style: preserve-3d;
-  animation: rotation 10s infinite linear;
-  transform: translateX(-50%) translateY(-50%) translateZ(-400px);
+  animation: rotation 25s infinite linear;
 }
+
+// .album-cards:hover {
+//   animation-play-state: paused;
+// }
 
 @keyframes rotation {
   0% {
@@ -30,13 +32,10 @@ body {
     transform: translateX(-50%) translateY(-50%) translateZ(-400px) rotateY(360deg);
   }
 }
+
 .album-card {
   position: absolute;
   width: 200px;
-  top: 0;
-  left: 0;
-  transform-origin: center center;
-  transition: transform 0.5s;
 }
 
 .album-card img {
@@ -45,11 +44,6 @@ body {
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.album-card.active {
-  transform: rotateY(0deg) translateZ(400px) scale(1.5);
-  z-index: 1;
 }
 
 .album-card:nth-child(1) {
