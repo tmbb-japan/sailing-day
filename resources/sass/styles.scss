@@ -26,10 +26,10 @@ body {
 
 @keyframes rotation {
   0% {
-    transform: translateX(-50%) translateY(-50%) translateZ(-400px) rotateY(0deg);
+    transform: translateZ(-400px) rotateY(0deg);
   }
   100% {
-    transform: translateX(-50%) translateY(-50%) translateZ(-400px) rotateY(360deg);
+    transform: translateZ(-400px) rotateY(360deg);
   }
 }
 
@@ -47,33 +47,33 @@ body {
 }
 
 .album-card:nth-child(1) {
-  transform: rotateY(0deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(0deg) translateZ(400px);
 }
 
 .album-card:nth-child(2) {
-  transform: rotateY(45deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(45deg) translateZ(400px);
 }
 
 .album-card:nth-child(3) {
-  transform: rotateY(90deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(90deg) translateZ(400px);
 }
 
 .album-card:nth-child(4) {
-  transform: rotateY(135deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(135deg) translateZ(400px);
 }
 
 .album-card:nth-child(5) {
-  transform: rotateY(180deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(180deg) translateZ(400px);
 }
 
 .album-card:nth-child(6) {
-  transform: rotateY(225deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(225deg) translateZ(400px);
 }
 
 .album-card:nth-child(7) {
-  transform: rotateY(270deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(270deg) translateZ(400px);
 }
 
 .album-card:nth-child(8) {
-  transform: rotateY(315deg) translateZ(400px);
+  transform: translateX(-50%) translateY(-50%) rotateY(315deg) translateZ(400px);
 }
