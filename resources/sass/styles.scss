@@ -45,35 +45,3 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
-.album-card:nth-child(1) {
-  transform: translateX(-50%) translateY(-50%) rotateY(0deg) translateZ(400px);
-}
-
-.album-card:nth-child(2) {
-  transform: translateX(-50%) translateY(-50%) rotateY(45deg) translateZ(400px);
-}
-
-.album-card:nth-child(3) {
-  transform: translateX(-50%) translateY(-50%) rotateY(90deg) translateZ(400px);
-}
-
-.album-card:nth-child(4) {
-  transform: translateX(-50%) translateY(-50%) rotateY(135deg) translateZ(400px);
-}
-
-.album-card:nth-child(5) {
-  transform: translateX(-50%) translateY(-50%) rotateY(180deg) translateZ(400px);
-}
-
-.album-card:nth-child(6) {
-  transform: translateX(-50%) translateY(-50%) rotateY(225deg) translateZ(400px);
-}
-
-.album-card:nth-child(7) {
-  transform: translateX(-50%) translateY(-50%) rotateY(270deg) translateZ(400px);
-}
-
-.album-card:nth-child(8) {
-  transform: translateX(-50%) translateY(-50%) rotateY(315deg) translateZ(400px);
-}
