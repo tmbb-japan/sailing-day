@@ -20,9 +20,9 @@ body {
   animation: rotation 25s infinite linear;
 }
 
-// .album-cards:hover {
-//   animation-play-state: paused;
-// }
+.album-cards:hover {
+  animation-play-state: paused;
+}
 
 @keyframes rotation {
   0% {
