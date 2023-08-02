@@ -9,7 +9,7 @@ class AlbumController extends Controller
     public function index()
     {
         $albums = Album::all();
-        return view('welcome', ['albums' => $albums]);
+        return view('main', ['albums' => $albums]);
     }
 }
 ?>

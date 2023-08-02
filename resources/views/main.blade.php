@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="app">
-      <album-component></album-component>
+      <album-component :albums="{{ $albums }}"></album-component>
     </div>
   </body>
 </html>
