@@ -6,9 +6,16 @@
             :key="index"
             class="album-card"
             :style="getCardStyle(index)"
+            v-on:click="handleCardClick(index)" 
         >
             <img :src="assetPath(imagePath)" alt="Album Image" />
         </div>
+      </div>
+    </div>
+    <!-- modal -->
+    <div v-if="selectedAlbumIndex !== null" class="modal">
+      <div class="modal-content">   
+        <img :src="assetPath(albums[selectedAlbumIndex].image_path)" alt="Album Image" v-on:click="closeModal" />
       </div>
     </div>
 </template>
@@ -23,6 +30,7 @@
         data(){
             return {
                 translateZ: "400px",
+                selectedAlbumIndex: null,
             }
         },
         computed: {
@@ -43,6 +51,12 @@
             assetPath(path) {
                 const baseUrl = window.location.origin;
                 return `${baseUrl}/${path}`;
+            },
+            handleCardClick(index) {
+                this.selectedAlbumIndex = index;
+            },
+            closeModal() {
+                this.selectedAlbumIndex = null;
             },
         },
     }
