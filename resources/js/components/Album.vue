@@ -14,13 +14,18 @@
     </div>
     <!-- modal -->
     <div v-if="selectedAlbumIndex !== null" class="modal">
-      <div class="modal-content">   
+      <div class="modal-content">
         <img :src="assetPath(albums[selectedAlbumIndex].image_path)" alt="Album Image" v-on:click="closeModal" />
+        <modal-screen></modal-screen>   
       </div>
     </div>
 </template>
 <script>
+    import ModalScreen from './ModalScreen.vue';
     export default {
+        components: {
+            ModalScreen
+        },
         props:{
             albums : {
                 type: Array,
