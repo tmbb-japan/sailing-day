@@ -61,6 +61,55 @@ body {
 .modal-content {
   max-width: 80%;
   max-height: 80%;
-  overflow: auto;
+  overflow-y: auto;
   color: white;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+}
+
+.rounded-image {
+  width: 42.0px;
+  height: 42.0px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.info-text {
+  font-size: 8.0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.info-text-artist,
+.info-text-released {
+  margin: 0; /* 기본 마진 제거 */
+  padding: 0 5px; /* 텍스트 주변에 간격을 주기 위한 패딩 설정 */
+}
+
+.icon-image {
+  display: inline-block;
+  width: 24px; /* 원하는 가로 크기로 설정하세요 */
+  height: 24px; /* 원하는 세로 크기로 설정하세요 */
+  margin-right: 8.0px;
+}
+
+.scrollable-list {
+  padding-top: 16.0px;
+}
+
+.scrollable-list ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.scrollable-list li {
+  padding: 24.0px;
+  border-bottom: 1px solid #ccc;
 }

@@ -14,7 +14,7 @@ class AlbumSeeder extends Seeder
     public function run(): void
     {
         // 이미지 파일 경로
-        $imageDirectory = public_path('images');
+        $imageDirectory = public_path('images/albums');
         // 디렉토리 내 모든 이미지 파일에 대해 반복
         $files = File::files($imageDirectory);
         foreach ($files as $file) {
