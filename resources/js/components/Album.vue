@@ -14,9 +14,8 @@
     </div>
     <!-- modal -->
     <div v-if="selectedAlbumIndex !== null" class="modal">
-      <div class="modal-content">
-        <img :src="assetPath(albums[selectedAlbumIndex].image_path)" alt="Album Image" v-on:click="closeModal" />
-        <modal-screen></modal-screen>   
+      <div class="modal-content" v-on:click="closeModal">
+        <modal-screen :imgSrc="assetPath(albums[selectedAlbumIndex].image_path)"></modal-screen>   
       </div>
     </div>
 </template>
