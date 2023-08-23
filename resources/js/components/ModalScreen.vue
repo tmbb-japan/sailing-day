@@ -8,9 +8,14 @@
                 <p class="info-text-released">the time of released</p>
             </div>
         </div>
-        <div>
-            <a href=""><img src="images/Icons/more.png" class="icon-image" alt="More Icon" /></a>
-            <a href=""><img src="images/Icons/share.png" class="icon-image" alt="Share Icon" /></a>
+        <div class="icon-container">
+            <div class="left-aligned-links">
+                <a href="#" class="icon-image"><div class="share"></div></a>
+                <a href="#" class="icon-image"><div class="more"></div></a>
+            </div>
+            <div class="right-aligned-link">
+                <a href="#" class="icon-image"><div class="shuffle"></div></a>
+            </div>
         </div>
     </header>
     <main class="scrollable-list">
@@ -39,6 +44,8 @@
                     "Item 2",
                     "Item 3",
                     "Item 4",
+                    "Item 5",
+                    "Item 6",
                 ],
             };
         }
