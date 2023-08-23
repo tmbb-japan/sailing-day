@@ -1,6 +1,9 @@
 <template>
-    <header class="modal-header">
-        <h1>Album title</h1>
+    <header>
+        <div class="modal-header">
+            <p class="album-title">Album title</p>
+            <a href="#" class="icon-image" v-on:click="callCloseModal"><div class="close"></div></a>   
+        </div>
         <div class="info-container">
             <img :src="imgSrc" class="rounded-image" alt="Album Image" />
             <div class="info-text">
@@ -32,10 +35,14 @@
                 type: String,
                 required: true,
             },
+            closeModal: Function,
         },
         computed:{
         },
         methods:{
+            callCloseModal() {
+                this.closeModal();
+            },
         },
         data() {
             return {

@@ -14,8 +14,11 @@
     </div>
     <!-- modal -->
     <div v-if="selectedAlbumIndex !== null" class="modal">
-      <div class="modal-content" v-on:click="closeModal">
-        <modal-screen :imgSrc="assetPath(albums[selectedAlbumIndex].image_path)"></modal-screen>   
+      <div class="modal-content">
+        <modal-screen 
+            :imgSrc="assetPath(albums[selectedAlbumIndex].image_path)"
+            :closeModal="closeModal">
+        </modal-screen>
       </div>
     </div>
 </template>
@@ -58,9 +61,11 @@
             },
             handleCardClick(index) {
                 this.selectedAlbumIndex = index;
+                document.body.style.overflow = "hidden";
             },
             closeModal() {
                 this.selectedAlbumIndex = null;
+                document.body.style.overflow = "auto";
             },
         },
     }

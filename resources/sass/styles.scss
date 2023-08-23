@@ -77,6 +77,13 @@ body {
   border-radius: 0.25em; /* 스크롤바 썸네일 모양 */
 }
 
+.modal-header {
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .info-container {
   display: flex;
   align-items: center;
@@ -123,6 +130,12 @@ body {
   width: 18px; 
   height: 18px;
   margin-right: 10px;
+}
+.close{
+  background-image: url('/public/images/Icons/close.png');
+  background-size: cover;
+  width: inherit;
+  height: inherit;
 }
 .more{
   background-image: url('/public/images/Icons/more.png');
