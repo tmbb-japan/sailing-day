@@ -8,13 +8,13 @@
             <div class="info-text">
                 <p class="info-text-title">{{ albums.title }}</p>
                 <p class="info-text-artist">{{ albums.artist_name }}</p>
-                <!-- <p class="info-text-released">{{ albums.released_at }}</p> -->
             </div>
         </div>
         <div class="icon-container">
             <div class="left-aligned-links">
                 <a href="#" class="icon-image"><div class="share"></div></a>
                 <a href="#" class="icon-image"><div class="more"></div></a>
+                <!-- <p class="info-text-released">{{ albums.released_at }}</p> -->
             </div>
             <div class="right-aligned-link">
                 <a href="#" class="icon-image"><div class="shuffle"></div></a>
