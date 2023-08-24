@@ -1,14 +1,14 @@
 <template>
     <header>
         <div class="modal-header">
-            <p class="album-title">Album title</p>
             <a href="#" class="icon-image" v-on:click="callCloseModal"><div class="close"></div></a>   
         </div>
         <div class="info-container">
             <img :src="imgSrc" class="rounded-image" alt="Album Image" />
             <div class="info-text">
-                <p class="info-text-artist">Artist name</p>
-                <p class="info-text-released">the time of released</p>
+                <p class="info-text-title">{{ albums.title }}</p>
+                <p class="info-text-artist">{{ albums.artist_name }}</p>
+                <!-- <p class="info-text-released">{{ albums.released_at }}</p> -->
             </div>
         </div>
         <div class="icon-container">
@@ -36,12 +36,21 @@
                 required: true,
             },
             closeModal: Function,
+            albums: {
+            type: Object,
+            required: true
+            }
         },
         computed:{
         },
         methods:{
             callCloseModal() {
                 this.closeModal();
+            },
+            handleEscapeKey(event) {
+                if (event.key === "Escape") {
+                    this.closeModal();
+                }
             },
         },
         data() {
@@ -55,6 +64,12 @@
                     "Item 6",
                 ],
             };
-        }
+        },
+        mounted() {
+            document.addEventListener("keydown", this.handleEscapeKey);
+        },
+        beforeDestroy() {
+            document.removeEventListener("keydown", this.handleEscapeKey);
+        },
     }
 </script>

@@ -47,6 +47,7 @@ body {
 }
 
 .modal {
+  font-family: 'Roboto', sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -78,9 +79,9 @@ body {
 }
 
 .modal-header {
-  padding-left: 10px;
+  padding-top: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -100,18 +101,25 @@ body {
 }
 
 .info-text {
-  font-size: 8.0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  margin-left: 10px;
 }
 
-.info-text-artist,
-.info-text-released {
-  margin: 0;
+.info-text-title ,
+.info-text-artist {
+
   padding: 0 5px;
 }
+
+.info-text-title {
+  font-size: 10px;
+  font-weight: 700;
+}
+.info-text-artist {
+  font-size: 2.5px;
+}
+
 
 .icon-container {
   padding-top: 12.0px;

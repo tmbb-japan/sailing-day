@@ -17,7 +17,9 @@
       <div class="modal-content">
         <modal-screen 
             :imgSrc="assetPath(albums[selectedAlbumIndex].image_path)"
-            :closeModal="closeModal">
+            :closeModal="closeModal"
+            :albums="albums[selectedAlbumIndex]"
+        >
         </modal-screen>
       </div>
     </div>
