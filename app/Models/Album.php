@@ -12,4 +12,9 @@ class Album extends Model
     protected $fillable = [
         'image_path'
     ];
+
+    public function songs()
+    {
+        return $this->hasMany(Song::class);
+    }
 }
