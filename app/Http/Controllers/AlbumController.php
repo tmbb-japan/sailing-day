@@ -8,7 +8,7 @@ class AlbumController extends Controller
 {
     public function index()
     {
-        $albums = Album::all();
+        $albums = Album::with('songs')->get();
         return view('main', ['albums' => $albums]);
     }
 }

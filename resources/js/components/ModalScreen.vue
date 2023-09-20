@@ -14,7 +14,6 @@
             <div class="left-aligned-links">
                 <a href="#" class="icon-image"><div class="share"></div></a>
                 <a href="#" class="icon-image"><div class="more"></div></a>
-                <!-- <p class="info-text-released">{{ albums.released_at }}</p> -->
             </div>
             <div class="right-aligned-link">
                 <a href="#" class="icon-image"><div class="shuffle"></div></a>
@@ -23,7 +22,7 @@
     </header>
     <main class="scrollable-list">
         <ul>
-            <li v-for="(item, index) in listItems" :key="index">{{ item }}</li>
+            <li v-for="(song, index) in albums.songs" :key="index">{{ song.title }}</li>
         </ul>
     </main>
 </template>
@@ -52,18 +51,6 @@
                     this.closeModal();
                 }
             },
-        },
-        data() {
-            return {
-                listItems: [
-                    "Item 1",
-                    "Item 2",
-                    "Item 3",
-                    "Item 4",
-                    "Item 5",
-                    "Item 6",
-                ],
-            };
         },
         mounted() {
             document.addEventListener("keydown", this.handleEscapeKey);
